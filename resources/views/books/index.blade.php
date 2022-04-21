@@ -15,23 +15,23 @@
     <h1>Enter your complete name</h1>
 
     <!-- 1. point to the appropriate form handler with the proper HTTP request method -->
-    <form action="/??????" method="?????">
+    <form action="/register-user" method="POST">
     <!-- 2. add the cross site request forgery blade tag here -->
-
-    <div class="row">
-        <div class="col col-md-6">
-            <label>First Name:</label>
-            <input type="text" name="first_name" class="form-control">
+        @csrf
+        <div class="row">
+            <div class="col col-md-6">
+                <label>First Name:</label>
+                <input type="text" name="first_name" class="form-control">
+            </div>
+            <div class="col col-md-6">
+                <label>Last Name:</label>
+                <input type="text" name="last_name" class="form-control">
+            </div>
         </div>
-        <div class="col col-md-6">
-            <label>Last Name:</label>
-            <input type="text" name="last_name" class="form-control">
+        <hr />
+        <div class="row">
+            <button class="btn btn-primary btn-lg">Select Books</button>
         </div>
-    </div>
-    <hr />
-    <div class="row">
-        <button class="btn btn-primary btn-lg">Select Books</button>
-    </div>
     </form>
 </div>
 
